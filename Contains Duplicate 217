@@ -1,0 +1,18 @@
+"This function checks if there are any duplicates in the given list of integers."
+
+def containsDuplicate(nums):
+    """
+    :type nums: List[int]
+    :rtype: bool
+    """
+    s = set()
+    
+    for i in nums:
+        if i in s:
+            return True
+        s.add(i)
+    return False
+
+# Example usage:
+nums = [1, 2, 3, 1]
+print(containsDuplicate(nums))  # Output: True
